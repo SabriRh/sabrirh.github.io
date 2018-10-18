@@ -1,23 +1,106 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Sabri Rhaimïa | Web Developer</title>
-		<meta name="description" content="A collection of decorative animated background shapes powered by WebGL and TweenMax." />
-		<meta name="keywords" content="web , developer , javaScript , IT , " />
-		<meta name="author" content="Rhaimïa Sabri" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body>
-		<main>
-			<div class="content">
-				<canvas class="scene scene--full" id="scene"></canvas>
-				<script type="x-shader/x-vertex" id="wrapVertexShader">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sabri Rhaimïa | Web Developer</title>
+	<meta name="description" content="A collection of decorative animated background shapes powered by WebGL and TweenMax." />
+	<meta name="keywords" content="web , developer , javaScript , IT , " />
+	<meta name="author" content="Rhaimïa Sabri" />
+	<link rel="shortcut icon" href="srh.ico">
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body>
+	<main>
+
+
+
+		<nav class="menu">
+			<div class="menu__item menu__item--1" data-direction="bt">
+				<div class="menu__item-inner">
+					<div class="mainmenu">
+						<a href="#" class="mainmenu__item">Story</a>
+						<a href="#" class="mainmenu__item">Chronicles</a>
+						<a href="#" class="mainmenu__item">Tour</a>
+						<a href="#" class="mainmenu__item">Contact</a>
+					</div>
+					<p class="label label--topleft label--vert-mirror">the important stuff</p>
+					<p class="label label--bottomright label--vert">made in bannockburn</p>
+				</div>
+			</div>
+			<div class="menu__item menu__item--2" data-direction="lr">
+				<div class="menu__item-inner">
+					<div class="menu__item-map"></div>
+					<a href="#" class="menu__item-hoverlink">The location</a>
+				</div>
+			</div>
+			<div class="menu__item menu__item--3" data-direction="bt">
+				<div class="menu__item-inner">
+					<div class="sidemenu">
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">The Gameplay</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">About LARP</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">The Rules</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">History</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">People</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">Join</span>
+						</a>
+						<a href="#" class="sidemenu__item">
+							<span class="sidemenu__item-inner">...</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item menu__item--4" data-direction="rl">
+				<div class="menu__item-inner">
+					<p class="label label--topleft label--line">Join us now</p>
+					<a href="#" class="menu__item-link">Learn how to
+						<br> participate</a>
+				</div>
+			</div>
+			<div class="menu__item menu__item--5" data-direction="tb">
+				<div class="menu__item-inner">
+					<p class="quote">Hail to thee, our infantry, still brave, beyond the grave</p>
+				</div>
+			</div>
+			<button class="action action--menu">
+<!-- 				<svg class="icon icon--menu">
+					<use xlink:href="#icon-menu"></use>
+				</svg> -->
+				<svg class="icon icon--menu" viewBox="0 0 252 252" width="24px" height="24px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" stroke="none" stroke-width="1"/><g id="Two-Tone" stroke="#ffffff" stroke-width="21"><path d="M21,126h210"/><path d="M21,63h210"/><path d="M21,189h210"/></g></g></svg>
+
+			</button>
+			<button class="action action--close">
+				<svg class="icon icon--close">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+				<svg class="icon icon--close" height="24px" width="24px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+					<g>
+					  <path fill="#FFFFFF" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+					</g>
+				  </svg>
+			</button>
+		</nav>
+
+
+		<div class="content">
+			<canvas class="scene scene--full" id="scene"></canvas>
+			<script type="x-shader/x-vertex" id="wrapVertexShader">
 					attribute float size;
 					attribute vec3 color;
 					varying vec3 vColor;
@@ -28,7 +111,7 @@
 						gl_Position = projectionMatrix * mvPosition;
 					}
 				</script>
-				<script type="x-shader/x-fragment" id="wrapFragmentShader">
+			<script type="x-shader/x-fragment" id="wrapFragmentShader">
 					varying vec3 vColor;
 					uniform sampler2D texture;
 					void main(){
@@ -38,15 +121,18 @@
 						gl_FragColor = color;
 					}
 				</script>
-				<div class="content__inner">
-					<h2 class="content__title">Sabri Rh.</h2>
-					<h3 class="content__subtitle">Web Developer</h2>
-				</div>
+			<div class="content__inner">
+				<h2 class="content__title">Sabri Rh.</h2>
+				<h3 class="content__subtitle">Web Developer</h2>
 			</div>
-		</main>
-		<script src="js/script.js"></script>
-		<script src="js/three.min.js"></script>
-		<script src="js/TweenMax.min.js"></script>
-		<script src="js/scriptgl.js"></script>
-	</body>
+		</div>
+	</main>
+	<script src="js/script.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/scriptgl.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/demo.js"></script>
+</body>
+
 </html>
