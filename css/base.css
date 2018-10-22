@@ -275,6 +275,7 @@ main {
 	color: var(--color-title);
 	z-index: 199;
 	cursor: default;
+	text-transform: capitalize;
 }
 
 .content__tagline {
