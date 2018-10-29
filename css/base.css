@@ -37,7 +37,7 @@ body {
 	font-family: "europa", Futura, Arial, sans-serif;
 	background-color: #fff;
 	background-color: var(--color-bg);
-	overflow: hidden;
+	overflow: auto;
 	padding: 6rem 0 0 0;
 }
 
@@ -100,7 +100,7 @@ main {
 }
 
 .content {
-	position: relative;
+	position: fixed;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -128,31 +128,6 @@ main {
 
 .content--fixed a {
 	pointer-events: auto;
-}
-
-/* Header */
-.codrops-header {
-	position: relative;
-	z-index: 100;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	align-items: center;
-	align-self: start;
-	grid-area: header;
-	justify-self: start;
-}
-
-.codrops-header__title {
-	font-size: 1em;
-	font-weight: 500;
-	margin: 0;
-	padding: 0.75em 0;
-}
-
-.info {
-	margin: 0 0 0 1.25em;
-	color: var(--color-info);
 }
 
 /* Canvas positions */
@@ -658,7 +633,9 @@ main {
 	}
 }
 
-.noselect {
+  
+
+  .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
 	  -webkit-user-select: none; /* Safari */
 	   -khtml-user-select: none; /* Konqueror HTML */
