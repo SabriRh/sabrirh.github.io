@@ -176,8 +176,10 @@
 
 	// closes the item/content
 	function closeContent() {
-		var contentItem = $('.content__item--current'),
+		var contentItem = bodyEl.querySelector('.content__item--current'),
 			zoomer = items[current].querySelector('.zoomer');
+
+			console.log('contentItem on close:: ', contentEl);
 
 		// classie.remove($('#description-content'), 'active');
 		$('#description-content').removeClass('active');
