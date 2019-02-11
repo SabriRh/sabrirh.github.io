@@ -388,9 +388,10 @@ main {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(../img/2.jpg) no-repeat 50% 50%;
+	background: url(../img/me.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	transition: transform 0.8s cubic-bezier(0.2,1,0.8,1);
+	/* filter: gray saturate(0%) brightness(50%) contrast(1000%); */
 }
 
 .menu__item-inner:hover .menu__item-map {
