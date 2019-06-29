@@ -209,12 +209,10 @@ hr {
     transition: all .1s ease-in-out;
 }
 #headerwrap {
-    background: url(../img/header-bg1.jpg) no-repeat center top;
     margin-top: -10px;
     padding-top: 20px;
     text-align: center;
-    background-attachment: relative;
-    background-position: center center;
+    background: url(../img/header.jpg) no-repeat center center;
     min-height: 750px;
     width: 100%;
     -webkit-background-size: 100%;
