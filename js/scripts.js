@@ -8,7 +8,7 @@ jQuery(function ($) {
     (function () {
 
         $("#back-countdiown").countdown({
-            date: "15 may 2019 00:00:00",
+            date: "1 jan 2021 00:00:00",
             format: "on"
         });
     

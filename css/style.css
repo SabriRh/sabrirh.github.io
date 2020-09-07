@@ -250,9 +250,9 @@ a:focus {
  * Footer
  *-----------------------*/
 .footer{
-    position: relative;
+    position: absolute;
+    bottom: 0;
     display: block;
-    bottom: auto;
     left: auto;
 }
 
