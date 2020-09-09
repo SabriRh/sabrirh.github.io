@@ -90,11 +90,6 @@ bufferWrapGeom.addAttribute('size', attributeSizes);
 var attributeColors = new THREE.BufferAttribute(colorsAttribute, 3);
 bufferWrapGeom.addAttribute('color', attributeColors);
 var shaderMaterial = new THREE.ShaderMaterial({
-    uniforms: {
-        texture: {
-            value: dotTexture
-        }
-    },
     vertexShader: document.getElementById("wrapVertexShader").textContent,
     fragmentShader: document.getElementById("wrapFragmentShader").textContent,
     transparent:true
@@ -124,55 +119,13 @@ for (i = dotsGeometry.vertices.length - 1; i >= 0; i--) {
 var segments = new THREE.LineSegments(segmentsGeom, segmentsMat);
 galaxy.add(segments);
 
-var hovered = [];
-var prevHovered = [];
 function render(a) {
     var i;
     dotsGeometry.verticesNeedUpdate = true;
     segmentsGeom.verticesNeedUpdate = true;
     
     raycaster.setFromCamera( mouse, camera );
-    var intersections = raycaster.intersectObjects([wrap]);
-    hovered = [];
-    if (intersections.length) {
-        for(i = 0; i < intersections.length; i++) {
-            var index = intersections[i].index;
-            hovered.push(index);
-            if (prevHovered.indexOf(index) === -1) {
-                onDotHover(index);
-            }
-         }
-    }
-    for(i = 0; i < prevHovered.length; i++){
-        if(hovered.indexOf(prevHovered[i]) === -1){
-            mouseOut(prevHovered[i]);
-        }
-    }
-    prevHovered = hovered.slice(0);
-    attributeSizes.needsUpdate = true;
-    attributePositions.needsUpdate = true;
     renderer.render(scene, camera);
-}
-
-function onDotHover(index) {
-    dotsGeometry.vertices[index].tl = new TimelineMax();
-    dotsGeometry.vertices[index].tl.to(dotsGeometry.vertices[index], 1, {
-        scaleX: 10,
-        ease: Elastic.easeOut.config(2, 0.2),
-        onUpdate: function() {
-            attributeSizes.array[index] = dotsGeometry.vertices[index].scaleX;
-        }
-    });
-}
-
-function mouseOut(index) {
-    dotsGeometry.vertices[index].tl.to(dotsGeometry.vertices[index], 0.4, {
-        scaleX: 5,
-        ease: Power2.easeOut,
-        onUpdate: function() {
-            attributeSizes.array[index] = dotsGeometry.vertices[index].scaleX;
-        }
-    });
 }
 
 function onResize() {
