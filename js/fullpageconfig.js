@@ -45,7 +45,7 @@ $(document).ready(function() {
 	verticalCentered: true,
 	paddingTop: '3em',
 	paddingBottom: '10px',
-	fixedElements: '#header, .footer',
+	fixedElements: '#footer-social-icons',
 	responsiveWidth: 0,
 	responsiveHeight: 0,
 	responsiveSlides: false,
