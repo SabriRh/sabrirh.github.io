@@ -1,86 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>SabriRh Portfolio</title>
+	<title>Sabri Rhaimïa | Web Developer</title>
+	<meta name="description" content="A collection of decorative animated background shapes powered by WebGL and TweenMax." />
+	<meta name="keywords" content="web , developer , javaScript , angular , IT , senior , consultant , typescipt , meteorjs " />
+	<meta name="author" content="Rhaimïa Sabri" />
+	<link rel="shortcut icon" href="srh.ico">
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- Feather Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
+	<!-- General demo styles & header -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
 
-	<!-- web-fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<!-- font-awesome -->
-	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Style CSS -->
-	<link href="css/style.css" rel="stylesheet">
+<body>
+	<canvas class="scene scene--full" id="scene"></canvas>
+	<script type="x-shader/x-vertex" id="wrapVertexShader">
+			attribute float size;
+			attribute vec3 color;
+			varying vec3 vColor;
+			void main() {
+				vColor = color;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_PointSize = size * ( 350.0 / - mvPosition.z );
+				gl_Position = projectionMatrix * mvPosition;
+			}
+		</script>
+	<script type="x-shader/x-fragment" id="wrapFragmentShader">
+			varying vec3 vColor;
+			uniform sampler2D texture;
+			void main(){
+				vec4 textureColor = texture2D( texture, gl_PointCoord );
+				if ( textureColor.a < 0.3 ) discard;
+				vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+				gl_FragColor = color;
+			}
+		</script>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-  </head>
-  <body>
-  	<section class="wraper">
-  		<header class="header">
-  			<h1>Stay Tuned |</h1>
-  			<h2>I'm busy working on something awesome.</h2>
-  		</header>
-  		<!-- .header -->
+	<div id="header-social-icons">
+		<ul class="social-icons">
+			<li><a href="mailto:san@antonio.net?subject=Contact pro&body=Bonjour," class="social-icon"> <i class="fa fa-envelope"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/sabrirh/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+			<li><a href="https://tn.linkedin.com/in/sabrirh" class="social-icon"> <i class="fa fa-github"></i></a></li>
+			<li><a href="https://www.facebook.com/SabriRh92" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+			<li><a href="https://www.instagram.com/sabri.rh/" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+		</ul>
+	</div>
 
+	<main id="fullpage">
+		<section class="section1 section">
+			<div class="content">
 
-  		<section class="countdown-wrapper">
-  			<ul id="back-countdiown">
-  				<li>                    
-  					<span class="days">00</span>
-  					<p>days</p>
-  				</li>
-  				<li>
-  					<span class="hours">00</span>
-  					<p>hours </p>
-  				</li>
-  				<li>
-  					<span class="minutes">00</span>
-  					<p>minutes</p>
-  				</li>
-  				<li>
-  					<span class="seconds">00</span>
-  					<p>seconds</p>
-  				</li>               
-  			</ul><!-- #back-countdiown -->
-  		</section><!-- .countdown-wrapper -->
-
-  		<footer class="footer">
-
-  			<section class="social-links">
-  				<ul>
-					<li><a href="https://www.linkedin.com/in/sabrirh" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-  					<li><a href="https://www.facebook.com/SabriRh92" target="_blank"><i class="fa fa-facebook"></i></a></li>
-  					<li><a href="https://www.instagram.com/sabri.rh" target="_blank"><i class="fa fa-instagram"></i></a></li>
-  					<li><a href="https://twitter.com/rh_sabri" target="_blank"><i class="fa fa-twitter"></i></a></li>
-  				</ul>
-  			</section><!-- /.social-links -->
-
-  			<ul class="copyright">
-  				<li>&copy; SabriRh@2020 . All rights reserved.</li>
-  				<li>Design By: <a href="http://uicookies.com">uiCookies</a></li>
-  			</ul>
-
-  		</footer>
-  	</section>
+				<div class="content__inner">
+					<h2 class="content__title noselect">Sabri R.</h2>
+					<h3 class="content__subtitle noselect">Web Developer</h3>
+				</div>
 
 
-  	<div class="fullscreen-bg">
-  		<video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-  			<source src="img/video-bg.mp4" type="video/mp4">
-  		</video>
-  	</div> <!-- .fullscreen-bg -->
+				<div class="scroll-indicator">
+					<div class="dots"></div>
+				</div>
 
-  	<!-- Script -->
-  	<script src="js/jquery-2.1.4.min.js"></script>
-  	<script src="js/coundown-timer.js"></script>
-  	<script src="js/scripts.js"></script>
+			</div>
 
-  	</body>
+		</section>
+
+
+		<section class="section2 section" id="container">
+
+			<!-- slider -->
+			<section class="slider">
+				<!--mcdo Monopoly-->
+				<div class="slide slide--current" data-content="content-1">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/iphone.png" alt="iPhone" />
+							<div class="preview">
+								<img src="img/projets/mcdo-iphone-preview.jpg" alt="iPhone app preview" />
+								<div class="zoomer__area zoomer__area--size-2"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>Mc Donald France</span>Monopoly 2017</h2>
+				</div>
+				<!--mcdo Mr Mrs-->
+				<div class="slide" data-content="content-2">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/iphone.png" alt="iPhone" />
+							<div class="preview">
+								<img src="img/projets/mrmrs-iphone-preview.jpg" alt="iPhone app preview" />
+								<div class="zoomer__area zoomer__area--size-2"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>Mc Donald France</span>Monsieur Madame</h2>
+				</div>
+<!--				<div class="slide" data-content="content-2">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/ipad.png" alt="iPad Mini" />
+							<div class="preview">
+								<img src="img/ipad-content-preview.png" alt="iPad Mini app preview" />
+								<div class="zoomer__area zoomer__area&#45;&#45;size-4"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Fantastic</span> iPad Mini</h2>
+				</div>
+				<div class="slide" data-content="content-3">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/macbook.png" alt="MacBook" />
+							<div class="preview">
+								<img src="img/macbook-content-preview.jpg" alt="MacBook app preview" />
+								<div class="zoomer__area zoomer__area&#45;&#45;size-3"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Amazing</span> MacBook</h2>
+				</div>-->
+				<div class="slide" data-content="content-3">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/imac.png" alt="iMac" />
+							<div class="preview">
+								<img src="img/projets/vertuoz-imac-preview.png" alt="iMac app preview" />
+								<div class="zoomer__area zoomer__area--size-5"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>Vertuoz By Engie</span> Vertuoz Dashboard</h2>
+				</div>
+<!--				<div class="slide" data-content="content-5">
+					<div class="slide__mover">
+						<div class="zoomer flex-center">
+							<img class="zoomer__image" src="img/apple-watch.png" alt="Apple Watch" />
+							<div class="preview rounded">
+								<img src="img/apple-watch-content-preview.png" alt="Apple Watch app preview" />
+								<div class="zoomer__area zoomer__area&#45;&#45;size-1"></div>
+							</div>
+						</div>
+					</div>
+					<h2 class="slide__title"><span>The Fabulous</span> Apple Watch</h2>
+				</div>-->
+				<nav class="slider__nav">
+					<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous
+							product</span></button>
+					<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
+					<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next
+							product</span></button>
+				</nav>
+			</section>
+			<!-- /slider-->
+			<!-- content -->
+			<section class="content" id="description-content">
+				<div class="content__item" id="content-1">
+					<img class="content__item-img rounded-right" src="img/projets/mcdo-iphone-content.jpg" alt="Apple Watch Content" />
+					<div class="content__item-inner">
+						<h2>The iPhone 6</h2>
+						<h3>Incredible performance for powerful apps</h3>
+						<p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger
+							display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new barometer. And with
+							increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
+						<p><a href="https://www.apple.com/iphone-6/technology/">Learn more about this technology &xrarr;</a></p>
+					</div>
+				</div>
+				<div class="content__item" id="content-2">
+					<img class="content__item-img rounded-right" src="img/projets/msmrs-iphone-content.jpg" alt="Apple Watch Content" />
+					<div class="content__item-inner">
+						<h2>The iPhone 6</h2>
+						<h3>Incredible performance for powerful apps</h3>
+						<p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger
+							display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new barometer. And with
+							increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
+						<p><a href="https://www.apple.com/iphone-6/technology/">Learn more about this technology &xrarr;</a></p>
+					</div>
+				</div>
+<!--				<div class="content__item" id="content-2">
+					<img class="content__item-img rounded-right" src="img/ipad-content.jpg" alt="iPad Mini Content" />
+					<div class="content__item-inner">
+						<h2>The iPad Mini</h2>
+						<h3>Desktop-class architecture without a desktop</h3>
+						<p>Don’t let its size fool you. iPad mini 3 is powered by an A7 chip with 64-bit desktop-class architecture. A7
+							delivers amazing processing power without sacriﬁcing battery life. So you get incredible performance in a device
+							you can take with you wherever you go.</p>
+						<p><a href="https://www.apple.com/ipad-mini-3/performance/">Learn more about Performance &xrarr;</a></p>
+					</div>
+				</div>
+				<div class="content__item" id="content-3">
+					<img class="content__item-img rounded-right" src="img/macbook-content.jpg" alt="MacBook Content" />
+					<div class="content__item-inner">
+						<h2>The MacBook</h2>
+						<h3>It's the future of the notebook</h3>
+						<p>With the new MacBook, we set out to do the impossible: engineer a full-size experience into the lightest and
+							most compact Mac notebook ever. That meant reimagining every element to make it not only lighter and thinner but
+							also better. The result is more than just a new notebook. It's the future of the notebook.</p>
+						<p><a href="https://www.apple.com/macbook/design/">Learn more about the design &xrarr;</a></p>
+					</div>
+				</div>-->
+				<div class="content__item" id="content-3">
+					<img class="content__item-img rounded-right" src="img/projets/vertuoz-imac-content.jpg" alt="iMac Content" />
+					<div class="content__item-inner">
+						<h2>Vertuoz</h2>
+						<h3>Smart. Human.</h3>
+						<p>Architecte, intégrateur et opérateur de solutions digitales pour les bâtiments et les sites industriels, Vertuoz déploie des projets complets sur de multiples thématiques : neutralité carbone, confort, décret éco-énergie tertiaire.</p>
+						<p><a href="https://engie-vertuoz.fr/">Engie Vertuoz &xrarr;</a></p>
+					</div>
+				</div>
+<!--				<div class="content__item" id="content-5">
+					<img class="content__item-img rounded-right" src="img/apple-watch-content.png" alt="Apple Watch Content" />
+					<div class="content__item-inner">
+						<h2>The Apple Watch</h2>
+						<h3>Entirely new ways to stay in touch</h3>
+						<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your
+							wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with
+							each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways —
+							like sending a tap, a sketch, or even your heartbeat. </p>
+						<p><a href="https://www.apple.com/watch/new-ways-to-connect/">Learn more about new ways to connect &xrarr;</a></p>
+					</div>
+				</div>-->
+				<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+			</section>
+			<!-- /content -->
+
+
+
+		</section>
+
+
+	</main>
+
+	
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/charming.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/scriptgl.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/fullpageconfig.js"></script>
+</body>
+
 </html>
