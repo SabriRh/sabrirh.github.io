@@ -101,6 +101,46 @@ body {
 	animation-delay: 0.5s;
 }
 
+.tags {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 1rem;
+	flex-flow: row wrap;
+}
+
+.tag {
+	--color: var(--light-color);
+	font-family: var(--regular-font);
+	font-size: 1rem;
+	border-radius: 100rem;
+	box-shadow: 0 0 0 2px var(--light-color);
+	background-color: transparent;
+	color: var(--dark-color);
+	font-weight: bold;
+}
+
+.tag > span {
+	display: inline-block;
+	position: relative;
+	color: var(--dark-color);
+	text-decoration: none;
+	padding: .5rem 1rem .5rem 2rem;
+}
+
+.tag > span::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 100%;
+	background-color: var(--color);
+	transform: translateY(-50%);
+}
+
+
 @-webkit-keyframes dot {
 	0% {
 		-webkit-transform: scale(0.75);

@@ -2,41 +2,52 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sabri Rhaimïa | Web Developer</title>
-	<meta name="description" content="6+ ans d'expérience dans l'ingénierie logiciel, principalement dans la conception/développement d'applications web et mobile autour des technologies JavaScript (Angular, Node.js, Meteor ...)." />
-	<meta name="keywords" content="web , developer , javaScript , angular , IT , senior , consultant , typescipt , meteorjs " />
-	<meta name="author" content="Rhaimïa Sabri" />
-	<link rel="shortcut icon" href="srh.ico">
-	<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJC84HRNTD"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sabri Rhaimïa | Web Developer</title>
+    <meta name="description"
+          content="6+ ans d'expérience dans l'ingénierie logiciel, principalement dans la conception/développement d'applications web et mobile autour des technologies JavaScript (Angular, Node.js, Meteor ...)."/>
+    <meta name="keywords"
+          content="web , developer , javaScript , angular , IT , senior , consultant , typescipt , meteorjs "/>
+    <meta name="author" content="Rhaimïa Sabri"/>
+    <link rel="shortcut icon" href="srh.ico">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJC84HRNTD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'G-GJC84HRNTD');
-	</script>
-	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this website in a modern browser that supports CSS Variables.");</script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<!-- Feather Icons -->
-	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
-	<!-- General demo styles & header -->
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<!-- Component styles -->
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
-	<script src="js/modernizr.custom.js"></script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-GJC84HRNTD');
+    </script>
+    <script>document.documentElement.className = "js";
+    var supportsCssVars = function () {
+        var e, t = document.createElement("style");
+        return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this website in a modern browser that supports CSS Variables.");</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Feather Icons -->
+    <link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
+    <!-- General demo styles & header -->
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <!-- Component styles -->
+    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"/>
+    <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
-	<canvas class="scene scene--full" id="scene"></canvas>
-	<script type="x-shader/x-vertex" id="wrapVertexShader">
+<canvas class="scene scene--full" id="scene"></canvas>
+<script type="x-shader/x-vertex" id="wrapVertexShader">
 			attribute float size;
 			attribute vec3 color;
 			varying vec3 vColor;
@@ -46,8 +57,12 @@
 				gl_PointSize = size * ( 350.0 / - mvPosition.z );
 				gl_Position = projectionMatrix * mvPosition;
 			}
-		</script>
-	<script type="x-shader/x-fragment" id="wrapFragmentShader">
+
+
+
+
+</script>
+<script type="x-shader/x-fragment" id="wrapFragmentShader">
 			varying vec3 vColor;
 			uniform sampler2D texture;
 			void main(){
@@ -56,214 +71,308 @@
 				vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
 				gl_FragColor = color;
 			}
-		</script>
-
-	<div id="header-social-icons">
-		<ul class="social-icons">
-			<li><a href="mailto:san@antonio.net?subject=Contact pro&body=Bonjour," class="social-icon"> <i class="fa fa-envelope"></i></a></li>
-			<li><a href="https://www.linkedin.com/in/sabrirh/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-			<li><a href="https://tn.linkedin.com/in/sabrirh" class="social-icon"> <i class="fa fa-github"></i></a></li>
-			<li><a href="https://www.facebook.com/SabriRh92" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-			<li><a href="https://www.instagram.com/sabri.rh/" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-		</ul>
-	</div>
-
-	<main id="fullpage">
-		<section class="section1 section">
-			<div class="content">
-
-				<div class="content__inner">
-					<h2 class="content__title noselect">Sabri R.</h2>
-					<h3 class="content__subtitle noselect">Web Developer</h3>
-				</div>
-
-
-				<div class="scroll-indicator">
-					<div class="dots"></div>
-				</div>
-
-			</div>
-
-		</section>
-
-
-		<section class="section2 section" id="container">
-
-			<!-- slider -->
-			<section class="slider">
-				<!--mcdo Monopoly-->
-				<div class="slide slide--current" data-content="content-1">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/iphone.png" alt="iPhone" />
-							<div class="preview">
-								<img src="img/projets/mcdo-iphone-preview.jpg" alt="iPhone app preview" />
-								<div class="zoomer__area zoomer__area--size-2"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>Mc Donald France</span>Monopoly 2017</h2>
-				</div>
-				<!--mcdo Mr Mrs-->
-				<div class="slide" data-content="content-2">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/iphone.png" alt="iPhone" />
-							<div class="preview">
-								<img src="img/projets/mrmrs-iphone-preview.jpg" alt="iPhone app preview" />
-								<div class="zoomer__area zoomer__area--size-2"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>Mc Donald France</span>Monsieur Madame</h2>
-				</div>
-<!--				<div class="slide" data-content="content-2">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/ipad.png" alt="iPad Mini" />
-							<div class="preview">
-								<img src="img/ipad-content-preview.png" alt="iPad Mini app preview" />
-								<div class="zoomer__area zoomer__area&#45;&#45;size-4"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>The Fantastic</span> iPad Mini</h2>
-				</div>
-				<div class="slide" data-content="content-3">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/macbook.png" alt="MacBook" />
-							<div class="preview">
-								<img src="img/macbook-content-preview.jpg" alt="MacBook app preview" />
-								<div class="zoomer__area zoomer__area&#45;&#45;size-3"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>The Amazing</span> MacBook</h2>
-				</div>-->
-				<div class="slide" data-content="content-3">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/imac.png" alt="Vertuoz By Engie" />
-							<div class="preview">
-								<img src="img/projets/vertuoz-imac-preview.png" alt="Vertuoz By Engie" />
-								<div class="zoomer__area zoomer__area--size-5"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>Vertuoz By Engie</span> Vertuoz Dashboard</h2>
-				</div>
-<!--				<div class="slide" data-content="content-5">
-					<div class="slide__mover">
-						<div class="zoomer flex-center">
-							<img class="zoomer__image" src="img/apple-watch.png" alt="Apple Watch" />
-							<div class="preview rounded">
-								<img src="img/apple-watch-content-preview.png" alt="Apple Watch app preview" />
-								<div class="zoomer__area zoomer__area&#45;&#45;size-1"></div>
-							</div>
-						</div>
-					</div>
-					<h2 class="slide__title"><span>The Fabulous</span> Apple Watch</h2>
-				</div>-->
-				<nav class="slider__nav">
-					<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous
-							product</span></button>
-					<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
-					<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next
-							product</span></button>
-				</nav>
-			</section>
-			<!-- /slider-->
-			<!-- content -->
-			<section class="content" id="description-content">
-				<div class="content__item" id="content-1">
-					<img class="content__item-img rounded-right" src="img/projets/mcdo-iphone-content.jpg" alt="Apple Watch Content" />
-					<div class="content__item-inner">
-						<h2>The iPhone 6</h2>
-						<h3>Incredible performance for powerful apps</h3>
-						<p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger
-							display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new barometer. And with
-							increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
-						<p><a href="https://www.apple.com/iphone-6/technology/">Learn more about this technology &xrarr;</a></p>
-					</div>
-				</div>
-				<div class="content__item" id="content-2">
-					<img class="content__item-img rounded-right" src="img/projets/msmrs-iphone-content.jpg" alt="Apple Watch Content" />
-					<div class="content__item-inner">
-						<h2>The iPhone 6</h2>
-						<h3>Incredible performance for powerful apps</h3>
-						<p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while driving a larger
-							display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new barometer. And with
-							increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
-						<p><a href="https://www.apple.com/iphone-6/technology/">Learn more about this technology &xrarr;</a></p>
-					</div>
-				</div>
-<!--				<div class="content__item" id="content-2">
-					<img class="content__item-img rounded-right" src="img/ipad-content.jpg" alt="iPad Mini Content" />
-					<div class="content__item-inner">
-						<h2>The iPad Mini</h2>
-						<h3>Desktop-class architecture without a desktop</h3>
-						<p>Don’t let its size fool you. iPad mini 3 is powered by an A7 chip with 64-bit desktop-class architecture. A7
-							delivers amazing processing power without sacriﬁcing battery life. So you get incredible performance in a device
-							you can take with you wherever you go.</p>
-						<p><a href="https://www.apple.com/ipad-mini-3/performance/">Learn more about Performance &xrarr;</a></p>
-					</div>
-				</div>
-				<div class="content__item" id="content-3">
-					<img class="content__item-img rounded-right" src="img/macbook-content.jpg" alt="MacBook Content" />
-					<div class="content__item-inner">
-						<h2>The MacBook</h2>
-						<h3>It's the future of the notebook</h3>
-						<p>With the new MacBook, we set out to do the impossible: engineer a full-size experience into the lightest and
-							most compact Mac notebook ever. That meant reimagining every element to make it not only lighter and thinner but
-							also better. The result is more than just a new notebook. It's the future of the notebook.</p>
-						<p><a href="https://www.apple.com/macbook/design/">Learn more about the design &xrarr;</a></p>
-					</div>
-				</div>-->
-				<div class="content__item" id="content-3">
-					<img class="content__item-img rounded-right" src="img/projets/vertuoz-imac-content.jpg" alt="iMac Content" />
-					<div class="content__item-inner">
-						<h2>Vertuoz</h2>
-						<h3>Smart. Human.</h3>
-						<p>Architecte, intégrateur et opérateur de solutions digitales pour les bâtiments et les sites industriels, Vertuoz déploie des projets complets sur de multiples thématiques : neutralité carbone, confort, décret éco-énergie tertiaire.</p>
-						<p><a href="https://engie-vertuoz.fr/">Engie Vertuoz &xrarr;</a></p>
-					</div>
-				</div>
-<!--				<div class="content__item" id="content-5">
-					<img class="content__item-img rounded-right" src="img/apple-watch-content.png" alt="Apple Watch Content" />
-					<div class="content__item-inner">
-						<h2>The Apple Watch</h2>
-						<h3>Entirely new ways to stay in touch</h3>
-						<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your
-							wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with
-							each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways —
-							like sending a tap, a sketch, or even your heartbeat. </p>
-						<p><a href="https://www.apple.com/watch/new-ways-to-connect/">Learn more about new ways to connect &xrarr;</a></p>
-					</div>
-				</div>-->
-				<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
-			</section>
-			<!-- /content -->
 
 
 
-		</section>
+
+</script>
+
+<div id="header-social-icons">
+    <ul class="social-icons">
+        <li><a href="mailto:sabri.rhaimia@gmail.com?subject=Contact pro&body=Bonjour," target="_blank"
+               class="social-icon"> <i class="fa fa-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/sabrirh/" target="_blank" class="social-icon"> <i
+                class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://tn.linkedin.com/in/sabrirh" target="_blank" class="social-icon"> <i
+                class="fa fa-github"></i></a></li>
+        <li><a href="https://www.facebook.com/SabriRh92" target="_blank" class="social-icon"> <i
+                class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/sabri.rh/" target="_blank" class="social-icon"> <i
+                class="fa fa-instagram"></i></a></li>
+    </ul>
+</div>
+
+<main id="fullpage">
+    <section class="section1 section">
+        <div class="content">
+
+            <div class="content__inner">
+                <h2 class="content__title noselect">Sabri R.</h2>
+                <h3 class="content__subtitle noselect">Web Developer</h3>
+            </div>
 
 
-	</main>
+            <div class="scroll-indicator">
+                <div class="dots"></div>
+            </div>
 
-	
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script>
-	<script src="js/charming.min.js"></script>
-	<script src="js/three.min.js"></script>
-	<script src="js/TweenMax.min.js"></script>
-	<script src="js/scriptgl.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/dynamics.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/fullpageconfig.js"></script>
+        </div>
+
+    </section>
+
+
+    <section class="section2 section" id="container">
+
+        <!-- slider -->
+        <section class="slider">
+            <!-- Vertuoz-->
+            <div class="slide slide--current" data-content="content-1">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/imac.png" alt="Vertuoz By Engie"/>
+                        <div class="preview">
+                            <img src="img/projets/vertuoz-imac-preview.png" alt="Vertuoz By Engie"/>
+                            <div class="zoomer__area zoomer__area--size-5"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Vertuoz By Engie</span> Vertuoz Dashboard</h2>
+            </div>
+            <!--Resopharma-->
+            <div class="slide" data-content="content-2">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/imac.png" alt="Le pharmacien"/>
+                        <div class="preview">
+                            <img src="img/projets/lepharmacien-imac-preview.png" alt="Le pharmacien"/>
+                            <div class="zoomer__area zoomer__area--size-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Mc Donald France</span>Monsieur Madame</h2>
+            </div>
+            <!--mcdo Monopoly-->
+            <div class="slide" data-content="content-3">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/iphone.png" alt="Mc Donald Monopoly"/>
+                        <div class="preview">
+                            <img src="img/projets/mcdo-iphone-preview.jpg" alt="Mc Donald Monopoly"/>
+                            <div class="zoomer__area zoomer__area--size-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Mc Donald France</span>Monopoly 2017</h2>
+            </div>
+            <!--mcdo Mr Mrs-->
+            <div class="slide" data-content="content-4">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/iphone.png" alt="Mc Donald Mr Mme"/>
+                        <div class="preview">
+                            <img src="img/projets/mrmrs-iphone-preview.jpg" alt="Mc Donald Mr Mme"/>
+                            <div class="zoomer__area zoomer__area--size-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Mc Donald France</span>Monsieur Madame</h2>
+            </div>
+            <!--Tunisia Mall-->
+            <div class="slide" data-content="content-5">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/imac.png" alt="Table d'orientation Tunisia Mall"/>
+                        <div class="preview">
+                            <img src="img/projets/tunisia-mall-preview.png" alt="Table d'orientation Tunisia Mall"/>
+                            <div class="zoomer__area zoomer__area--size-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Tunisia Mall</span>Table d'orientation</h2>
+            </div>
+            <!--Salvaper-->
+            <div class="slide" data-content="content-6">
+                <div class="slide__mover">
+                    <div class="zoomer flex-center">
+                        <img class="zoomer__image" src="img/imac.png" alt="Salvaper"/>
+                        <div class="preview">
+                            <img src="img/projets/salvaper-preview.png" alt="Salvaper"/>
+                            <div class="zoomer__area zoomer__area--size-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="slide__title"><span>Salvaper</span>Salvaper tracking</h2>
+            </div>
+
+            <!-- Navigation-->
+            <nav class="slider__nav">
+                <button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous
+							project</span></button>
+                <button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View project</span>
+                </button>
+                <button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next
+							project</span></button>
+            </nav>
+        </section>
+        <!-- /slider-->
+        <!-- content -->
+        <section class="content" id="description-content">
+            <!-- Vertuoz-->
+            <div class="content__item" id="content-1">
+                <img class="content__item-img rounded-right" src="img/projets/vertuoz-imac-content.jpg"
+                     alt="iMac Content"/>
+                <div class="content__item-inner">
+                    <h2>Vertuoz</h2>
+                    <h3>Smart. Human.</h3>
+                    <p>Architecte, intégrateur et opérateur de solutions digitales pour les bâtiments et les sites
+                        industriels, Vertuoz déploie des projets complets sur de multiples thématiques : neutralité
+                        carbone, confort, décret éco-énergie tertiaire.</p>
+                    <p><a href="https://engie-vertuoz.fr/">Engie Vertuoz &xrarr;</a></p>
+                </div>
+            </div>
+            <!-- Resopharma-->
+            <div class="content__item" id="content-2">
+                <img class="content__item-img rounded-right" src="img/projets/lepharmacien-imac-content.png"
+                     alt="le pharmacien"/>
+                <div class="content__item-inner">
+                    <h2>Le pharmacien</h2>
+                    <h3>Mon partenaire santé</h3>
+                    <p>Le dispositif digital lepharmacien a pour objectif d’améliorer la communication entre les patients et leur pharmacie.
+                        À ce titre, il se compose d’un site portail (www.lepharmacien.fr) qui permet au grand public de trouver sa pharmacie, de connaître ses horaires ou trouver la pharmacie de garde la plus proche, de s’informer sur sa santé et sur les produits dispensés en pharmacie.
+                        Le dispositif lepharmacien permet également à toutes les pharmacies d’officine de France de disposer d’un site internet et d’une application mobile.
+                        Les pharmacies adhérentes au dispositif bénéficient de surcroit d’une fonctionnalité d’envoi d’ordonnance pour leurs patients.</p>
+                    <p><a href="https://www.lepharmacien.fr/">Le pharmacien &xrarr;</a></p>
+                </div>
+            </div>
+            <!--mcdo Monopoly-->
+            <div class="content__item" id="content-3">
+                <img class="content__item-img rounded-right" src="img/projets/mcdo-iphone-content.jpg"
+                     alt="Monopoly 2017"/>
+                <div class="content__item-inner">
+                    <h2>Monopoly</h2>
+                    <h3>3 façons de jouer, 3 façons de gagner.</h3>
+                    <p>Une animation nommée Le Monopoly dans les restaurants Mcdonald’s et avec elle, des millions de cadeaux à gagner !
+
+                        Jusqu’au 12 novembre 2017 en passant commande, vous aurez la possibilité d’obtenir trois types de vignettes :
+
+                        – Les vignettes 100 % gagnantes qui vous permettent de gagner un cadeau immédiatement.
+                        – Les vignettes billets Monopoly qui permettent d’enchérir sur le cadeau qui vous plaît ou pour les échanger contre un film à visionner.
+                        – Les vignettes carte Chance qui permettent de vous inscrire au tirage au sort quotidien sur mcdonalds.fr, pour tenter de gagner 2000 € .</p>
+                    <div class="tags">
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                        <span class="tag" style="--color: #61dafb;">
+                            <span>React</span>
+                        </span>
+                        <span class="tag" style="--color: #ff3e00;">
+                            <span>Svelte</span>
+                        </span>
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--mcdo Mr Mrs-->
+            <div class="content__item" id="content-4">
+                <img class="content__item-img rounded-right" src="img/projets/msmrs-iphone-content.jpg"
+                     alt="Monsieur Madame"/>
+                <div class="content__item-inner">
+                    <h2>Monsieur Madame</h2>
+                    <h3>Monsieur Madame à collectionner !</h3>
+                    <p>90 Figurines Monsieur Madame à collectionner !
+                        Deux personnages Monsieur et/ou Madame par Happy Meal.</p>
+                </div>
+            </div>
+            <!--Tunisia mall-->
+            <div class="content__item" id="content-5">
+                <img class="content__item-img rounded-right" src="img/projets/tunisia-Mall-content.jpg"
+                     alt="La table d'orientation"/>
+                <div class="content__item-inner">
+                    <h2>La table d'orientation</h2>
+                    <h3>La première table d'orientation en Tunisie.</h3>
+                    <p>Une application Web dynamique pour la table
+                        d’orientation qui fournit plusieurs fonctionnalités
+                        (orientation , interaction avec la carte interactive ,
+                        recherche , consultation des catégories des
+                        boutiques , des services , météo ...).</p>
+                    <div class="tags">
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                        <span class="tag" style="--color: #61dafb;">
+                            <span>React</span>
+                        </span>
+                        <span class="tag" style="--color: #ff3e00;">
+                            <span>Svelte</span>
+                        </span>
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--Salvaper-->
+            <div class="content__item" id="content-6">
+                <img class="content__item-img rounded-right" src="img/projets/salvaper-content.jfif"
+                     alt="Apple Watch Content"/>
+                <div class="content__item-inner">
+                    <h2>The iPhone 6</h2>
+                    <h3>Incredible performance for powerful apps</h3>
+                    <p>Built on 64-bit desktop-class architecture, the new A8 chip delivers more power, even while
+                        driving a larger
+                        display. The M8 motion coprocessor efficiently gathers data from advanced sensors and a new
+                        barometer. And with
+                        increased battery life, iPhone 6 lets you do more, for longer than ever.</p>
+                    <div class="tags">
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                        <span class="tag" style="--color: #61dafb;">
+                            <span>React</span>
+                        </span>
+                        <span class="tag" style="--color: #ff3e00;">
+                            <span>Svelte</span>
+                        </span>
+                        <span class="tag" style="--color: #efd81d;">
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="tag" style="--color: #41b883;">
+                            <span>Vue</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--close content btn-->
+            <button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span>
+            </button>
+        </section>
+        <!-- /content -->
+    </section>
+
+
+</main>
+
+
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/charming.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/scriptgl.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/dynamics.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+<script src="js/fullpageconfig.js"></script>
 </body>
 
 </html>

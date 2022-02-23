@@ -3,6 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7ef438-6fcf-404d-a124-f13019aa0d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Desktop_0049_Encheres-copie-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/apple-watch-content-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/apple-watch-content.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/facebook_share_mr-mrs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/festival_hammamet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fond-bonduelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/projets/bonduelle-imac-content.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/imac-content-preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/imac-content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/ipad-content-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iphone-content-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/iphone-content.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/jeu_monopoly_mcdo-312x312.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/macbook-content-preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/macbook-content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/téléchargement.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/téléchargement.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,6 +147,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.postfix.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZB5853\Desktop\sabrirh.github.io\img\projets" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sabrirh.github.io/index.html" useBuiltInWebServerPort="true">

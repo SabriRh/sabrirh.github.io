@@ -292,6 +292,7 @@
   }
   .section2 .content__item-inner {
 	padding: 0 10vw 0;
+	  max-width:60vw;
 	opacity: 0;
 	-webkit-transform: translate3d(0, 50px, 0);
 	transform: translate3d(0, 50px, 0);
