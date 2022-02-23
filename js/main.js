@@ -146,7 +146,7 @@
                         navigate('right');
                         break;
                 }
-            };
+            }
         });
     }
 
@@ -154,7 +154,7 @@
     function openItem(item) {
         if (isOpen) return;
         isOpen = true;
-
+        $.fn.fullpage.setAllowScrolling(false);
         // the element that will be transformed
         var zoomer = item.querySelector('.zoomer');
         // slide screen preview
@@ -259,6 +259,7 @@
 
             isOpen = false;
         });
+        $.fn.fullpage.setAllowScrolling(true);
     }
 
     // applies the necessary transform value to scale the item up

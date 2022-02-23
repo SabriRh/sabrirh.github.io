@@ -46,12 +46,12 @@
 	display: block;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	color: #35303d;
+	color: #a95151;
 }
 
 .slider__nav {
 	position: absolute;
-	bottom: 10em;
+	bottom: 9em;
 	width: 100%;
 	text-align: center;
 	z-index: 88;
@@ -65,7 +65,7 @@
 	margin: 0 25px;
 	padding: 0;
 	cursor: pointer;
-	color: #5c5edc;
+	color: #f7dde0;
 	border: none;
 	background: none;
 }
