@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d7ef438-6fcf-404d-a124-f13019aa0d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/projets/lepharmacien-imac-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/projets/lepharmacien-imac-preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/projets/salvaper-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/projets/salvaper-preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/projets/tunisia-mall-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/projets/tunisia-mall-preview.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
