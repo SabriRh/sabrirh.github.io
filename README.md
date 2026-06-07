@@ -9,7 +9,7 @@ En ligne : [sabrirh.github.io](https://sabrirh.github.io)
 - [Angular 21](https://angular.dev) (composants standalone, signals)
 - TypeScript, SCSS
 - [Jest](https://jestjs.io) + [Spectator](https://github.com/ngneat/spectator) pour les tests
-- Déploiement GitHub Pages via [gh-pages](https://github.com/tschaub/gh-pages)
+- Déploiement continu sur GitHub Pages via GitHub Actions
 
 ## Démarrage
 
@@ -20,12 +20,11 @@ npm start        # serveur de dev sur http://localhost:4200
 
 ## Scripts
 
-| Commande         | Description                                  |
-| ---------------- | -------------------------------------------- |
-| `npm start`      | Serveur de développement                     |
-| `npm run build`  | Build de production dans `dist/`             |
-| `npm test`       | Lance la suite de tests Jest                 |
-| `npm run deploy` | Build puis publie sur la branche `gh-pages`  |
+| Commande        | Description                      |
+| --------------- | -------------------------------- |
+| `npm start`     | Serveur de développement         |
+| `npm run build` | Build de production dans `dist/` |
+| `npm test`      | Lance la suite de tests Jest     |
 
 ## Contenu
 
@@ -34,9 +33,9 @@ les visuels associés se trouvent dans [`public/imgs/`](public/imgs/).
 
 ## Déploiement
 
-```bash
-npm run deploy
-```
+Le déploiement est automatique : chaque push sur `master` déclenche le workflow
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) qui teste, build et
+publie le site sur GitHub Pages. Un déclenchement manuel est aussi possible depuis
+l'onglet **Actions** du dépôt.
 
-Le build est publié sur la branche `gh-pages`. Vérifier que la source GitHub Pages
-du dépôt (Settings → Pages) pointe bien sur la branche `gh-pages`.
+Réglage requis une seule fois : **Settings → Pages → Source = GitHub Actions**.
