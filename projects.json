@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Nomineo+",
+      "description": "Modernisation de la plateforme d'épargne de Generali France. Gestion de transactions complexes et refonte front-end pour 8-10 développeurs.",
+      "image": "./imgs/generali.jpg",
+      "technologies": ["Angular", "TypeScript", "RxJS", "Ngxs"],
+      "methodologies": ["SAFe", "Leadership", "Team Management"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": true,
+      "company": "Generali France",
+      "period": "2023 - Aujourd'hui",
+      "role": "Lead Dev Front"
+    },
+    {
+      "id": 2,
+      "title": "Briefs Publicitaires M6",
+      "description": "Refonte de deux applications majeures pour la gestion des briefs publicitaires, destinées aux agences et équipes internes.",
+      "image": "./imgs/m6.png",
+      "technologies": ["Angular", "TypeScript", "SCSS", "Storybook"],
+      "methodologies": ["UX/UI Collaboration", "Performance", "Ateliers Produit"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": true,
+      "company": "M6",
+      "period": "2022 - 2023",
+      "role": "Tech Lead Front"
+    },
+    {
+      "id": 3,
+      "title": "Vertuoz - Gestion Énergétique",
+      "description": "Solutions digitales pour la gestion énergétique et le confort industriel. Conception d'interfaces personnalisées et accompagnement technique.",
+      "image": "./imgs/engie.jpg",
+      "technologies": ["Angular", "TypeScript", "Node.js", "REST APIs"],
+      "methodologies": ["Veille technologique", "Bonnes pratiques", "Design"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": false,
+      "company": "Engie Solutions",
+      "period": "2019 - 2022",
+      "role": "Expert Angular - Référent FrontEnd"
+    },
+    {
+      "id": 4,
+      "title": "Monopoly McDonald's",
+      "description": "Développement des jeux Monopoly 2017 et Monsieur Madame 2017 sur le site mobile m.mcdonalds.fr.",
+      "image": "./imgs/mcdo.png",
+      "technologies": ["Angular", "JavaScript", "HTML5", "SCSS"],
+      "methodologies": ["Intégration", "Optimisation", "Responsive"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": false,
+      "company": "McDonald's France",
+      "period": "2016 - 2018",
+      "role": "Développeur Web Frontend"
+    },
+    {
+      "id": 5,
+      "title": "Table Tactile Interactive",
+      "description": "Développement complet d'une table tactile interactive pour Tunisia Mall, backend et frontend adaptés aux écrans tactiles.",
+      "image": "./imgs/tunisiamall.jpg",
+      "technologies": ["Fullstack", "Node.js", "Spring Boot", "AngularJS"],
+      "methodologies": ["Déploiement", "Support client", "Itérations"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": false,
+      "company": "Digit-U",
+      "period": "2015 - 2016",
+      "role": "Développeur Fullstack"
+    },
+    {
+      "id": 6,
+      "title": "Lepharmacien.fr",
+      "description": "Refactoring d'une application web/mobile pour la gestion des ordonnances et services aux patients en pharmacie.",
+      "image": "./imgs/lepharmacien.jpg",
+      "technologies": ["Angular", "Git", "Maintenance"],
+      "methodologies": ["Bonnes pratiques", "Code review", "Mise en production"],
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "featured": false,
+      "company": "Resopharma",
+      "period": "2018 - 2019",
+      "role": "Développeur Web Frontend"
+    }
+  ]
+}
