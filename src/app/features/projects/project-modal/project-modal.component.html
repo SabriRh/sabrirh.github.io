@@ -1,0 +1,42 @@
+@if (project(); as p) {
+  <div class="overlay" (click)="dismiss()">
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="p.title"
+      (click)="$event.stopPropagation()"
+    >
+      <button type="button" class="close" aria-label="Fermer" (click)="dismiss()">×</button>
+
+      <div class="media">
+        <img [src]="p.image" [alt]="p.title" />
+      </div>
+
+      <div class="content">
+        <h3 class="title">{{ p.title }}</h3>
+        <p class="desc">{{ p.description }}</p>
+
+        <div class="meta">
+          <div class="meta-group">
+            <span class="eyebrow">Technologies</span>
+            <div class="chips">
+              @for (tech of p.technologies; track tech) {
+                <span class="chip mono">{{ tech }}</span>
+              }
+            </div>
+          </div>
+
+          <div class="meta-group">
+            <span class="eyebrow">Méthodologies</span>
+            <div class="chips">
+              @for (method of p.methodologies; track method) {
+                <span class="chip mono">{{ method }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

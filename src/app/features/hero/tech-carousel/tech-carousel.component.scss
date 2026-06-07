@@ -1,0 +1,105 @@
+@use '../../../../styles/glass' as *;
+
+:host {
+  display: block;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.stage {
+  position: relative;
+  width: 160px;
+  height: 190px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  @include glass();
+
+  transform: translateX(calc(var(--offset) * 132px))
+    translateZ(calc(var(--offset) * var(--offset) * -120px)) rotateY(calc(var(--offset) * -38deg))
+    scale(calc(1 - var(--offset) * var(--offset) * 0.16));
+  opacity: 0.5;
+  z-index: 1;
+  transition:
+    transform var(--dur-slow) var(--ease),
+    opacity var(--dur-slow) var(--ease),
+    color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.card.active {
+  opacity: 1;
+  color: var(--accent);
+  transform: translateX(0) translateZ(40px) rotateY(0deg) scale(1.08);
+  z-index: 3;
+  @include glass-hover();
+}
+
+.card.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.label {
+  font-size: var(--step--1);
+  letter-spacing: 0.03em;
+  color: var(--text-soft);
+}
+
+.card.active .label {
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: opacity var(--dur) var(--ease);
+  }
+}
+
+@media (max-width: 980px) {
+  .carousel {
+    height: 260px;
+    perspective: 850px;
+  }
+
+  .stage {
+    width: 140px;
+    height: 168px;
+  }
+
+  .card {
+    transform: translateX(calc(var(--offset) * 110px))
+      translateZ(calc(var(--offset) * var(--offset) * -110px)) rotateY(calc(var(--offset) * -38deg))
+      scale(calc(1 - var(--offset) * var(--offset) * 0.16));
+  }
+
+  .card.active {
+    transform: translateX(0) translateZ(40px) rotateY(0deg) scale(1.08);
+  }
+}

@@ -1,0 +1,20 @@
+<div
+  class="carousel"
+  role="img"
+  aria-label="Technologies maîtrisées : Angular, JavaScript, TypeScript, HTML, CSS, SCSS, Material, Bootstrap, Nx, Node.js, Python, Git, Jest, Spring Boot, Docker, MongoDB, SQL"
+  aria-hidden="true"
+>
+  <div class="stage">
+    @for (tech of techs; track tech.name; let i = $index) {
+      <div
+        class="card"
+        [class.active]="isActive(i)"
+        [class.hidden]="offset(i) < -1 || offset(i) > 1"
+        [style.--offset]="offset(i)"
+      >
+        <img class="logo" [src]="iconUrl(tech.slug)" [alt]="tech.name" loading="lazy" />
+        <span class="label mono">{{ tech.name }}</span>
+      </div>
+    }
+  </div>
+</div>
