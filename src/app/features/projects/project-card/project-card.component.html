@@ -1,0 +1,20 @@
+<button type="button" class="card" appSpotlight (click)="emitOpen()">
+  <span class="card-spotlight" aria-hidden="true"></span>
+
+  <span class="thumb">
+    <img [src]="project().image" [alt]="project().title" loading="lazy" />
+  </span>
+
+  <span class="body">
+    <span class="title">{{ project().title }}</span>
+    <span class="desc">{{ project().description }}</span>
+
+    <span class="tags">
+      @for (tech of project().technologies; track tech) {
+        <span class="tag mono">{{ tech }}</span>
+      }
+    </span>
+  </span>
+
+  <span class="more mono" aria-hidden="true">Voir le projet →</span>
+</button>

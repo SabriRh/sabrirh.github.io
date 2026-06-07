@@ -1,0 +1,24 @@
+<section class="projects" id="projects">
+  <div class="container">
+    <header class="head" [appReveal]="0">
+      <span class="eyebrow">Mes réalisations</span>
+      <h2 class="title">Projets <span class="em">récents</span></h2>
+    </header>
+
+    @if (loading()) {
+      <div class="state mono">Chargement des projets…</div>
+    } @else if (error()) {
+      <div class="state mono">Impossible de charger les projets.</div>
+    } @else {
+      <div class="grid">
+        @for (project of projects(); track project.id; let i = $index) {
+          <div class="cell" [appReveal]="i * 80">
+            <app-project-card [project]="project" (open)="select($event)" />
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  <app-project-modal [project]="selected()" (close)="closeModal()" />
+</section>

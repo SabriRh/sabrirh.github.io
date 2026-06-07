@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+/out-tsc
+/.angular/cache
+
+# Tests
+/coverage
+
+# IDE / OS
+.DS_Store
+*.log
+**/.claude/*
+
+# Misc
+/.vscode/*
+!/.vscode/extensions.json

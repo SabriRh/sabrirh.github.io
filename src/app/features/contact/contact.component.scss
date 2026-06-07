@@ -1,0 +1,78 @@
+@use '../../../styles/glass' as *;
+
+.contact {
+  padding-block: var(--space-2xl) var(--space-lg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  @include glass();
+}
+
+.title {
+  font-size: var(--step-3);
+}
+
+.lead {
+  max-width: 48ch;
+  color: var(--text-soft);
+  font-size: var(--step-0);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.link {
+  padding: 0.8em 1.4em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: var(--step--1);
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.link.primary {
+  background: var(--gradient-accent);
+  color: var(--bg-deep);
+  font-weight: 600;
+  border-color: transparent;
+  box-shadow: 0 8px 28px var(--accent-glow);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  margin-top: var(--space-2xl);
+  padding: var(--space-md);
+  border-top: 1px solid var(--border-soft);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+.footer-note {
+  font-style: italic;
+}
+
+@media (max-width: 540px) {
+  .card {
+    padding: var(--space-lg);
+  }
+}

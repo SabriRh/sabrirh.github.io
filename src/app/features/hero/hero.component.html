@@ -1,0 +1,39 @@
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-inner">
+      <p class="kicker mono" style="animation-delay: 60ms">
+        Web Developer <span class="sep">/</span> Tech Lead
+      </p>
+
+      <h1 class="name" style="animation-delay: 140ms">
+        <span class="given">Sabri</span>
+        <span class="family">Rhaimia</span>
+      </h1>
+
+      <p class="tagline" style="animation-delay: 240ms">
+        Je pilote des produits web de l'idée à la production, avec précision et
+        <span class="accent">soin du détail</span>.
+      </p>
+
+      <ul class="roles" style="animation-delay: 340ms">
+        @for (role of roles; track role) {
+          <li class="role mono">{{ role }}</li>
+        }
+      </ul>
+
+      <button type="button" class="cta" (click)="scrollToProjects()" style="animation-delay: 440ms">
+        Explorer mes projets
+        <span class="cta-arrow" aria-hidden="true">↓</span>
+      </button>
+    </div>
+
+    <div class="hero-aside" style="animation-delay: 360ms">
+      <app-tech-carousel />
+    </div>
+  </div>
+
+  <div class="scroll-hint mono" aria-hidden="true">
+    <span>scroll</span>
+    <span class="scroll-line"></span>
+  </div>
+</section>
